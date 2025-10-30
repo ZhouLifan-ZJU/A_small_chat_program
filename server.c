@@ -16,11 +16,18 @@
 #define MAX_CLIENTS 10
 
 // 彻底解决中文编码问题
+// void SetupConsole() {
+//     // 使用GBK编码（中文Windows默认）
+//     SetConsoleOutputCP(936);
+//     SetConsoleCP(936);
+//     setlocale(LC_ALL, "chs");
+// }
+
+// 使用UTF-8编码
 void SetupConsole() {
-    // 使用GBK编码（中文Windows默认）
-    SetConsoleOutputCP(936);
-    SetConsoleCP(936);
-    setlocale(LC_ALL, "chs");
+    SetConsoleOutputCP(CP_UTF8);
+    SetConsoleCP(CP_UTF8);
+    setlocale(LC_ALL, ".UTF8");
 }
 
 int main() {
