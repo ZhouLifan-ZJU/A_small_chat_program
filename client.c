@@ -126,7 +126,7 @@ int main() {
     // 设置服务器地址
     server_addr.sin_family = AF_INET;
     server_addr.sin_port = htons(PORT);
-    server_addr.sin_addr.s_addr = inet_addr("127.0.0.1");  // 本地服务器
+    server_addr.sin_addr.s_addr = inet_addr("10.162.54.187");  // 本地服务器
 
     // 连接到服务器
     if (connect(client_socket, (struct sockaddr*)&server_addr, sizeof(server_addr)) == SOCKET_ERROR) {
